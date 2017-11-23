@@ -28,19 +28,7 @@ class Element<T> {
 
 }
 
-class StackOverFlowException extends Exception {
 
-	public StackOverFlowException(String message) {
-		super(message);
-	}
-
-}
-
-class StackUnderFlowException extends Exception {
-	public StackUnderFlowException(String message) {
-		super(message);
-	}
-}
 
 public class StackImpl<T> {
 
@@ -110,4 +98,17 @@ public class StackImpl<T> {
 
 	}
 
+	public static class StackOverFlowException extends Exception {
+
+		public StackOverFlowException(String message) {
+			super(message);
+		}
+
+	}
+
+	public static class StackUnderFlowException extends Exception {
+		public StackUnderFlowException(String message) {
+			super(message);
+		}
+	}
 }
