@@ -2,31 +2,29 @@
  * 
  */
 package com.java.algorithms.sorting;
-
 import static com.java.algorithms.sorting.Util.*;
 
 /**
  * @author Selvakumar Samuel Dhanraj
  *
- *         Nov 27, 2017
+ * Nov 27, 2017
  */
-public class BubbleSort {
-
+public class InsertionSort {
+	
+	/**
+	 * @param array
+	 */
 	public static void sort(int[] array) {
-
-		for (int i = 0; i < array.length; i++) {
-			boolean isSwapped = false;
-			for (int j = array.length - 1; j > i; j--) {
-				if (array[j - 1] > array[j]) {
-					swap(array, j - 1, j);
-					isSwapped = true;
-				}
-			}
-
-			if (!isSwapped)
-				break;
-		}
-
+		
+    for(int i=0;i<array.length-1;i++){
+    	for(int j=i+1;j>0;j--){
+    		if(array[j]<array[j-1])
+    			swap(array, j-1,j);
+    		else
+    			break;
+    	}
+    }
+		
 	}
 
 	/**
