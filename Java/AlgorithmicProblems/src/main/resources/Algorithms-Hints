@@ -1,0 +1,12 @@
+we built up our greedy algorithm exactly the same way we did for the Apple stocks question. By asking ourselves:
+
+"Suppose we could come up with the answer in one pass through the input, by simply updating the 'best answer so far' as we went. What additional values would we need to keep updated as we looked at each item in our set, in order to be able to update the 'best answer so far' in constant time?"
+
+For the Apple stocks question, the only "additional value" we needed was the min price so far.
+
+For this one, we needed four things in order to calculate the new highestProductOf3 at each step:
+
+    highestProductOf2
+    highest
+    lowestProductOf2
+    lowest
